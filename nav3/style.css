@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#container {
+    background-color: #778899;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo h1 {
+    /* background-color: yellow; */
+    line-height: 70px;
+    font-size: 40px;
+}
+
+
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* position: fixed; */
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    align-items: center;
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+.check {
+    color: white;
+    /* float: right; */
+    /* line-height: 70px; */
+    font-size: 40px;
+    /* display: inline-block; */
+    display: none;
+    cursor: pointer;
+    background: none;
+    position: relative;
+}
+
+#check-btn {
+    display: none;
+    background-color: none;
+}
+
+.check:active{
+    background-color: none;
+}
+
+/*  =================================
+    Main media -></><-
+================================= 
+*/
+
+@media (max-width: 600px) and (min-width: 200px) {
+    .nav-links, ul{
+        display: none;
+    }
+
+    .check {
+        display: block;
+        float: left;
+        /* background-color: blue; */
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .nav-links ul {
+        display: inline-block;
+        width: 100vw;
+        height: 100vw;
+
+    }
+
+    ul {
+        width: 50%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .nav-links ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #check-btn:checked+.nav-links,ul,li,a{
+        background-color: black;
+        color: lightblue;
+        display: block;
+        left: 0;
+
+    }
+
+    /*  =================================
+    fonts media -></><-
+================================= 
+*/
+@media (max-width: 700px) {
+        .logo h1 {
+            font-size: 35px;
+        }
+    }
+
+@media (max-width: 600px) {
+        .logo h1 {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .logo h1 {
+            font-size: 28px;
+        }
+    }
+}
+
+
+
+    /* .check:checked+ul {
+        background-color: beige;
+        display: block;
+
+        ul li a {
+            color: orange;
+        }
+    } */
+
+    /* @media (max-width: 600px) {
+    .cheakbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover {
+        background: none;
+        color: #ffcd28;
+    }
+
+    #cheak:checked~ul{
+        left: 0;
+    }
+} */
